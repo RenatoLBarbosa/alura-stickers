@@ -2,7 +2,7 @@
 
 <img src="https://raw.githubusercontent.com/abrahamcalf/programming-languages-logos/master/src/java/java_64x64.png" alt="Java">
 
-> Linha adicional de texto informativo sobre o que o projeto faz. Sua introdução deve ter cerca de 2 ou 3 linhas. Não exagere, as pessoas não vão ler.
+> A aplicação realiza consumo da API pública do IMDB (Internet Movie Database), onde há como opção Top 250 filmes/TV Shows, Filmes/TV Shows mais populares do momento (a fim de estudo, limitei a geração de imagens ao top 3), com isso é gerado uma imagem com transparencia adicionando a nota que foi avaliado no IMDB. Há também o consumo da API pública da NASA, onde nos traz a foto escolhida por eles para as datas 12/06/2022 a 14/06/2022 do endpoint APOD - Astronomy Picture of the Day).
 
 ### Ajustes e melhorias
 
