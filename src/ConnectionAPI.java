@@ -7,27 +7,23 @@ import java.net.http.HttpResponse.BodyHandlers;
 
 public class ConnectionAPI {
 
-    public static String body;
-    
-    public String catchData(String url) {
+	public static String body;
 
-        try {
+	public String catchData(String url) {
 
-            URI endereco = URI.create(url);
-            var client = HttpClient.newHttpClient();
-            var request = HttpRequest.newBuilder(endereco).GET().build();
-            HttpResponse<String> response = client.send(request, BodyHandlers.ofString());
-            String body = response.body();
-            return body;
+		try {
 
-        } catch (IOException | InterruptedException ex) {
-            throw new RuntimeException(ex);
-        }
+			URI endereco = URI.create(url);
+			var client = HttpClient.newHttpClient();
+			var request = HttpRequest.newBuilder(endereco).GET().build();
+			HttpResponse<String> response = client.send(request, BodyHandlers.ofString());
+			String body = response.body();
+			return body;
 
-    }
+		} catch (IOException | InterruptedException ex) {
+			throw new RuntimeException(ex);
+		}
 
+	}
 
-    
 }
-
-    

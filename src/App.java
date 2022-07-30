@@ -7,10 +7,10 @@ public class App {
 		// Acessar http a api, top 250 filmes
 		// https://imdb-api.com/en/API/Top250Movies/
 
-        LoadKey lk = new LoadKey();
-        Properties prop = lk.getProp();
-        String key = prop.getProperty("prop.imdbapi.key");
-        String keyNasa= prop.getProperty("prop.nasaapi.key");
+		LoadKey lk = new LoadKey();
+		Properties prop = lk.getProp();
+		String key = prop.getProperty("prop.imdbapi.key");
+		String keyNasa = prop.getProperty("prop.nasaapi.key");
 		// String url = "https://imdb-api.com/en/API/Top250Movies/k_0ojt0yvm" + key;
 //        String url = "https://raw.githubusercontent.com/alura-cursos/imersao-java/api/NASA-APOD.json";
 
@@ -57,7 +57,8 @@ public class App {
 
 			break;
 		case 5:
-			url = "https://api.nasa.gov/planetary/apod?api_key="+keyNasa+"&start_date=2022-06-12&end_date=2022-06-14";
+			url = "https://api.nasa.gov/planetary/apod?api_key=" + keyNasa
+					+ "&start_date=2022-06-12&end_date=2022-06-14";
 			o = new OnlyThreeNASA();
 			o.OnlyThreeResults(url);
 

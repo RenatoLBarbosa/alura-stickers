@@ -7,7 +7,7 @@ import java.io.InputStream;
 
 import javax.imageio.ImageIO;
 
-public class StickerCreatorNASA{
+public class StickerCreatorNASA {
 
 	public void create(InputStream is, String nomearquivo) throws Exception {
 
@@ -27,8 +27,8 @@ public class StickerCreatorNASA{
 		graphics.setBackground(Color.LIGHT_GRAY);
 		graphics.setFont(fonte);
 
-		graphics.drawString("NASA APOD", (largura / 2) - 120, novaAltura - 90); 
-		
+		graphics.drawString("NASA APOD", (largura / 2) - 120, novaAltura - 90);
+
 		ImageIO.write(newimg, "png", new File("saida/" + nomearquivo + ".png"));
 
 	}
