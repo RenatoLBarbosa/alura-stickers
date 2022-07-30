@@ -26,32 +26,32 @@ public class App {
 		System.out.println("Opção desejada: " + op);
 
 //        String apiurl =  "https://imdb-api.com/en/API/";
-
+		String apiurl = "https://api.mocki.io/v2/549a5d8b/";
 		String url;
 		OnlyThree o;
 
 		switch (op) {
 		case 1:
 //        	url = apiurl +"Top250Movies/"+ key; // não usado devido a instabilidade na API
-			url = "https://api.mocki.io/v2/549a5d8b/Top250Movies";
+			url = apiurl + "Top250Movies";
 			o = new OnlyThreeIMDB();
 			o.OnlyThreeResults(url);
 
 			break;
 		case 2:
-			url = "https://api.mocki.io/v2/549a5d8b/MostPopularMovies";
+			url = apiurl + "MostPopularMovies";
 			o = new OnlyThreeIMDB();
 			o.OnlyThreeResults(url);
 
 			break;
 		case 3:
-			url = "https://api.mocki.io/v2/549a5d8b/Top250TVs";
+			url = apiurl + "Top250TVs";
 			o = new OnlyThreeIMDB();
 			o.OnlyThreeResults(url);
 
 			break;
 		case 4:
-			url = "https://api.mocki.io/v2/549a5d8b/MostPopularTVs";
+			url = apiurl + "MostPopularTVs";
 			o = new OnlyThreeIMDB();
 			o.OnlyThreeResults(url);
 

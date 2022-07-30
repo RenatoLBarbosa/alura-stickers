@@ -14,10 +14,9 @@ public class StickerCreatorIMDB {
 		BufferedImage originalimg = ImageIO.read(is);
 
 		int largura = originalimg.getWidth();
-		int altura = originalimg.getHeight();
-		int novaAltura = altura + 200;
+		int altura = originalimg.getHeight() + 200;
 
-		BufferedImage newimg = new BufferedImage(largura, novaAltura, BufferedImage.TRANSLUCENT);
+		BufferedImage newimg = new BufferedImage(largura, altura, BufferedImage.TRANSLUCENT);
 
 		Graphics2D graphics = (Graphics2D) newimg.getGraphics();
 		graphics.drawImage(originalimg, 0, 0, null);
@@ -29,7 +28,7 @@ public class StickerCreatorIMDB {
 
 		ContentExtractorIMDB extractor = new ContentExtractorIMDB();
 
-		graphics.drawString("Nota IMDB: " + extractor.getRatings(i), (largura / 2) - 150, novaAltura - 90);
+		graphics.drawString("Nota IMDB: " + extractor.getRatings(i), (largura / 2) - 150, altura - 90);
 
 		ImageIO.write(newimg, "png", new File("saida/" + nomearquivo + ".png"));
 

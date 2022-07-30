@@ -17,8 +17,8 @@ public class ConnectionAPI {
 			var client = HttpClient.newHttpClient();
 			var request = HttpRequest.newBuilder(endereco).GET().build();
 			HttpResponse<String> response = client.send(request, BodyHandlers.ofString());
-			String body = response.body();
-			return body;
+
+			return response.body();
 
 		} catch (IOException | InterruptedException ex) {
 			throw new RuntimeException(ex);

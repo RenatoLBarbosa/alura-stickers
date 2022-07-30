@@ -14,10 +14,9 @@ public class StickerCreatorNASA {
 		BufferedImage originalimg = ImageIO.read(is);
 
 		int largura = originalimg.getWidth();
-		int altura = originalimg.getHeight();
-		int novaAltura = altura + 200;
+		int altura = originalimg.getHeight() + 200;
 
-		BufferedImage newimg = new BufferedImage(largura, novaAltura, BufferedImage.TRANSLUCENT);
+		BufferedImage newimg = new BufferedImage(largura, altura, BufferedImage.TRANSLUCENT);
 
 		Graphics2D graphics = (Graphics2D) newimg.getGraphics();
 		graphics.drawImage(originalimg, 0, 0, null);
@@ -27,7 +26,7 @@ public class StickerCreatorNASA {
 		graphics.setBackground(Color.LIGHT_GRAY);
 		graphics.setFont(fonte);
 
-		graphics.drawString("NASA APOD", (largura / 2) - 120, novaAltura - 90);
+		graphics.drawString("NASA APOD", (largura / 2) - 120, altura - 90);
 
 		ImageIO.write(newimg, "png", new File("saida/" + nomearquivo + ".png"));
 
